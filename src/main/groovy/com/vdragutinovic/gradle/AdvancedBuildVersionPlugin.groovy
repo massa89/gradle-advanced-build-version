@@ -1,9 +1,9 @@
-package org.moallemi.gradle
+package com.vdragutinovic.gradle
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.moallemi.gradle.internal.AdvancedBuildVersionExtension
-import org.moallemi.gradle.internal.VersionCodeType
+import com.vdragutinovic.gradle.internal.AdvancedBuildVersionExtension
+import com.vdragutinovic.gradle.internal.VersionCodeType
 
 class AdvancedBuildVersionPlugin implements Plugin<Project> {
 
@@ -28,8 +28,9 @@ class AdvancedBuildVersionPlugin implements Plugin<Project> {
                             def Properties versionProps = new Properties()
                             versionProps.load(new FileInputStream(versionPropsFile))
                             def code = advancedVersioning.versionCode
-
+                            def buildNumber = advancedVersioning.buildNumber
                             versionProps['AI_VERSION_CODE'] = code.toString()
+                            versionProps['BUILD_NUMBER'] = buildNumber.toString()
                             versionProps.store(versionPropsFile.newWriter(), null)
                         }
                     }

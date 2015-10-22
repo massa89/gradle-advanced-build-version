@@ -1,4 +1,4 @@
-package org.moallemi.gradle
+package com.vdragutinovic.gradle
 
 import org.gradle.api.Project;
 import org.gradle.testfixtures.ProjectBuilder;
@@ -9,7 +9,7 @@ import static org.fest.assertions.Assertions.assertThat;
 
 public class VersionNameTest {
     private Project project;
-    private static final PLUGIN_ID = 'org.moallemi.advanced-build-version';
+    private static final PLUGIN_ID = 'com.vdragutinovic.advanced-build-version';
 
     @BeforeMethod
     public void setUp() throws Exception {

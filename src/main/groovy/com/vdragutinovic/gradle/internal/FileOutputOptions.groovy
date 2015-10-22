@@ -1,11 +1,9 @@
-package org.moallemi.gradle.internal
+package com.vdragutinovic.gradle.internal
 
 import groovy.text.SimpleTemplateEngine
 import org.gradle.api.Project
 import org.gradle.api.logging.LogLevel
-import org.gradle.api.logging.Logger
-import org.gradle.api.logging.Logging
-import org.moallemi.gradle.AdvancedBuildVersionPlugin
+import com.vdragutinovic.gradle.AdvancedBuildVersionPlugin
 
 class FileOutputOptions {
 

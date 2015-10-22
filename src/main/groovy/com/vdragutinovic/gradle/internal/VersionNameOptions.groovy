@@ -1,4 +1,4 @@
-package org.moallemi.gradle.internal
+package com.vdragutinovic.gradle.internal
 
 import org.gradle.api.GradleScriptException;
 

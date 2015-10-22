@@ -1,4 +1,4 @@
-package org.moallemi.gradle.internal
+package com.vdragutinovic.gradle.internal
 
 import org.gradle.api.Project
 
@@ -34,6 +34,10 @@ class AdvancedBuildVersionExtension {
 
     int getVersionCode() {
         return codeOptions.versionCode
+    }
+
+    int getBuildNumber() {
+        return codeOptions.buildNumber;
     }
 
     String getVersionName() {

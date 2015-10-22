@@ -1,4 +1,4 @@
-package org.moallemi.gradle.internal
+package com.vdragutinovic.gradle.internal
 
 import date.DateUtils
 import date.JalaliDate
@@ -116,5 +116,22 @@ class VersionCodeOptions {
                 return Integer.parseInt(formatter.format(new Date())) - 1400000000;
         }
         return 1;
+    }
+
+    int getBuildNumber() {
+        versionPropsFile = new File(project.buildFile.getParent() + "/version.properties")
+        if (versionPropsFile.canRead()) {
+            def Properties versionProps = new Properties()
+            versionProps.load(new FileInputStream(versionPropsFile))
+            if (versionProps['BUILD_NUMBER'] == null) {
+                versionProps['BUILD_NUMBER'] = "0"
+            }
+            int buildNumber = Integer.valueOf(versionProps['BUILD_NUMBER'].toString()) + 1
+            return buildNumber
+        } else {
+            throw new GradleException("Could not read version.properties file in path \""
+                    + versionPropsFile.getAbsolutePath() + "\" \r\n" +
+                    "Please create this file and add it to your VCS (git, svn, ...).")
+        }
     }
 }

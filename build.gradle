@@ -1,8 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'groovy'
 
-group = GROUP
-version = VERSION_NAME
+//group = GROUP
+//version = VERSION_NAME
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.2.1'

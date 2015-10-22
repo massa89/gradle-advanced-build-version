@@ -1,9 +1,9 @@
-package org.moallemi.gradle
+package com.vdragutinovic.gradle
 
 import org.fest.assertions.Condition
 import org.gradle.api.Project
 import org.gradle.testfixtures.ProjectBuilder
-import org.moallemi.gradle.internal.VersionCodeType
+import com.vdragutinovic.gradle.internal.VersionCodeType
 import org.testng.Reporter
 import org.testng.annotations.BeforeMethod
 import org.testng.annotations.Test
@@ -12,7 +12,7 @@ import static org.fest.assertions.Assertions.assertThat
 
 public class VersionCodeTest {
     private Project project;
-    private static final PLUGIN_ID = 'org.moallemi.advanced-build-version';
+    private static final PLUGIN_ID = 'com.vdragutinovic.advanced-build-version';
 
     @BeforeMethod
     public void setUp() throws Exception {
