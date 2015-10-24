@@ -29,8 +29,8 @@ class AdvancedBuildVersionPlugin implements Plugin<Project> {
                             versionProps.load(new FileInputStream(versionPropsFile))
                             def code = advancedVersioning.versionCode
                             def buildNumber = advancedVersioning.buildNumber
-                            versionProps['AI_VERSION_CODE'] = code.toString()
-                            versionProps['BUILD_NUMBER'] = buildNumber.toString()
+                            versionProps['AI_VERSION_CODE'] = (code+1).toString()
+                            versionProps['BUILD_NUMBER'] = (buildNumber+1).toString()
                             versionProps.store(versionPropsFile.newWriter(), null)
                         }
                     }

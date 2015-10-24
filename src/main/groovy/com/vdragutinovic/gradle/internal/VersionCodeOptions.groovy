@@ -103,7 +103,7 @@ class VersionCodeOptions {
                     if (versionProps['AI_VERSION_CODE'] == null) {
                         versionProps['AI_VERSION_CODE'] = "0"
                     }
-                    int code = Integer.valueOf(versionProps['AI_VERSION_CODE'].toString()) + 1
+                    int code = Integer.valueOf(versionProps['AI_VERSION_CODE'].toString())
                     return code
                 } else {
                     throw new GradleException("Could not read version.properties file in path \""
@@ -126,7 +126,7 @@ class VersionCodeOptions {
             if (versionProps['BUILD_NUMBER'] == null) {
                 versionProps['BUILD_NUMBER'] = "0"
             }
-            int buildNumber = Integer.valueOf(versionProps['BUILD_NUMBER'].toString()) + 1
+            int buildNumber = Integer.valueOf(versionProps['BUILD_NUMBER'].toString())
             return buildNumber
         } else {
             throw new GradleException("Could not read version.properties file in path \""
